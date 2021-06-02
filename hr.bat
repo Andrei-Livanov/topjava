@@ -1,2 +1,2 @@
-call mvn -B -s settings.xml -SkipTests=true clean package
-call java -Spring.profiles.active="data,heroku" -DATABASE_URL="postgres://user:password@localhost:5432/topaz" -jar target/dependency/webapp-runner.jar target/*.war
+call mvn -B -s settings.xml -DskipTests=true clean package
+call java -Dspring.profiles.active="datajpa,heroku" -DDATABASE_URL="postgres://user:password@localhost:5432/topjava" -jar target/dependency/webapp-runner.jar target/*.war
